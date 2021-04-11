@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/main.css">
+
+<style>
+    
+
+.addBtn {
+    padding: 8px;
+}
+</style>
+</head>
+<body>
+    <div id="myDIV" class="header mt-5">
+        <h2 style="margin:5px">Note-Reminder</h2>
+        <form action="/posts" method="POST">
+        <input type="text" name="title" id="Title" placeholder="..🗒️.."> 
+        <input type="submit" value="📌" class="addBtn">
+    </form>
+    </div>
+    <div id="myDIV" class="header mt-5">
+    {% for post in posts %}
+    
+    <h2 style="margin:5px">{{post.title}}</h2>
+    
+    <a href="/posts/delete/{{post.id}}">❌</a>
+    
+    
+    {% endfor%}
+</div>
+
+    <img height="200px" width="200px" src="../static/img/1.jpg" />
+    <img class="addBtn" height="200px" width="200px" src="../static/img/2.jpg" />
+    <img class="addBtn" height="200px" width="200px" src="../static/img/3.jpg" />
+    <img class="addBtn" height="200px" width="200px" src="../static/img/4.jpg" />
+
+</body>
+<script src="js/main.js"></script>
+</html>
+
+
+
